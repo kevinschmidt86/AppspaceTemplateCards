@@ -1,0 +1,11 @@
+{
+    "Name": "__CARD_NAME__",
+    "Id": "__CARD_ID__",
+    "Description": "__CARD_DESCRIPTION__",
+    "Developer": "__CARD_DEVELOPER__",
+    "Version": "1.0.0",
+    "Thumbnail": "thumbnail.svg",
+    "Startup": "index.html",
+    "Schema": "schema.json",
+    "Model": "model.json"
+}

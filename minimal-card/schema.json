@@ -1,0 +1,15 @@
+{
+    "version": "1.1",
+    "inputs": [
+        {
+            "name": "headline",
+            "label": "Headline",
+            "placeholder": "Enter headline text",
+            "type": "textbox",
+            "validation": {
+                "required": true,
+                "maxlength": 256
+            }
+        }
+    ]
+}

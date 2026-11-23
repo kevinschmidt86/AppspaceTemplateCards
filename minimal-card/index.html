@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>__CARD_NAME__</title>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/cardapi.js"></script>
+    <style>
+        html, body { margin: 0; width: 100vw; height: 100vh; overflow: hidden; background: #ffffff; }
+        body { display: flex; align-items: center; justify-content: center; font-family: sans-serif; }
+        #headline { margin: 0; padding: 5vw; font-size: 6vw; text-align: center; color: #222222; }
+    </style>
+</head>
+<body>
+    <h1 id="headline"></h1>
+    <script>
+        (function () {
+            var loaded = false;
+
+            // Runs on initial model.json load and on every edit in the console form.
+            function render() {
+                try {
+                    document.getElementById('headline').textContent = ($cardApi.getModelProperty('headline') || {}).value || '';
+                    if (!loaded) {
+                        loaded = true;
+                        $cardApi.notifyOnLoad();
+                    }
+                } catch (e) {
+                    $cardApi.notifyOnError();
+                }
+            }
+
+            // Host events: 'api.init' (config loaded), 'play' (start animations), 'pause' (stop them).
+            function onMessage(event) {
+                var message = ((event || {}).message || '').toLowerCase();
+                if (message === 'play') { /* start timers/animations here */ }
+                if (message === 'pause') { /* stop timers/animations here */ }
+            }
+
+            $cardApi.subscribeModelUpdate(function () { $cardApi.isReady().then(render); });
+            $cardApi.subscribeToMessages(onMessage);
+            $cardApi.init();
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Sizes use viewport units so the card scales from phones to 4K displays. */
+html, body, #root { margin: 0; width: 100vw; height: 100vh; overflow: hidden; }
+body { background: #0f1b2b; color: #ffffff; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.card { box-sizing: border-box; height: 100%; padding: 5vmin 6vmin; display: flex; flex-direction: column; gap: 3vmin; }
+.headline { margin: 0; font-size: 6vmin; font-weight: 700; }
+.status { font-size: 3.2vmin; opacity: 0.8; }
+.status.error { color: #ff8a80; opacity: 1; }
+.items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2vmin; overflow: hidden; }
+.item { display: flex; flex-direction: column; padding: 2.2vmin 3vmin; border-radius: 1.2vmin; background: rgba(255, 255, 255, 0.08); }
+.is-playing .item { animation: rise 600ms ease-out both; }
+.is-paused .item { animation-play-state: paused; }
+.title { font-size: 3.6vmin; font-weight: 600; }
+.subtitle { font-size: 2.6vmin; opacity: 0.75; }
+.stale { margin-top: auto; font-size: 2vmin; opacity: 0.6; }
+@keyframes rise { from { opacity: 0; transform: translateY(2vmin); } to { opacity: 1; transform: none; } }

@@ -1,0 +1,1 @@
+This Repo includes template Appspace cards used as a starting point in card development efforts.

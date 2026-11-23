@@ -1,0 +1,8 @@
+{
+  "inputs": [
+    {
+      "name": "headline",
+      "value": "Hello from __CARD_NAME__"
+    }
+  ]
+}

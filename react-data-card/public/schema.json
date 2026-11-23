@@ -1,0 +1,49 @@
+{
+    "version": "1.1",
+    "inputs": [
+        {
+            "name": "headline",
+            "label": "Headline",
+            "type": "textbox",
+            "validation": { "required": false, "maxlength": 256 }
+        },
+        {
+            "name": "dataUrl",
+            "label": "Data URL (JSON)",
+            "placeholder": "https://api.example.com/items",
+            "type": "textbox",
+            "validation": { "required": true, "maxlength": 2048 }
+        },
+        {
+            "name": "fetchMode",
+            "label": "Fetch through",
+            "type": "dropdown",
+            "items": [
+                { "value": "proxy", "label": "Appspace proxy (recommended)" },
+                { "value": "direct", "label": "Direct (API must allow CORS)" }
+            ]
+        },
+        {
+            "name": "itemsPath",
+            "label": "Path to the list in the JSON (e.g. data.items; empty = top level)",
+            "type": "textbox"
+        },
+        {
+            "name": "titleField",
+            "label": "Item title field",
+            "type": "textbox"
+        },
+        {
+            "name": "subtitleField",
+            "label": "Item subtitle field",
+            "type": "textbox"
+        },
+        {
+            "name": "refreshSeconds",
+            "label": "Refresh every (seconds)",
+            "type": "textbox",
+            "options": { "type": "number" },
+            "validation": { "required": true }
+        }
+    ]
+}

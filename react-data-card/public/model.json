@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    { "name": "headline", "value": "__CARD_NAME__" },
+    { "name": "dataUrl", "value": "mock-data.json" },
+    { "name": "fetchMode", "value": "proxy" },
+    { "name": "itemsPath", "value": "items" },
+    { "name": "titleField", "value": "title" },
+    { "name": "subtitleField", "value": "subtitle" },
+    { "name": "refreshSeconds", "value": "300" }
+  ]
+}

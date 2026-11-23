@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "title": "Sample item one", "subtitle": "Served from mock-data.json" },
+    { "title": "Sample item two", "subtitle": "Set Data URL in the card settings" },
+    { "title": "Sample item three", "subtitle": "Relative URLs load from the card itself" }
+  ]
+}
